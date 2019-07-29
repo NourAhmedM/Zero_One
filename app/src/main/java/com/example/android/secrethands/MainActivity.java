@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.example.android.secrethands.fragments.HomePatient;
 import com.example.android.secrethands.fragments.ProfilePatient;
 import com.example.android.secrethands.fragments.Schedule;
+import com.example.android.secrethands.fragments.SchedulePager;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     private HomePatient homePatient;
     private ProfilePatient profilePatient;
-    private Schedule schedule;
+    private SchedulePager schedule;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         //intialize fragments
         homePatient=new HomePatient();
         profilePatient=new ProfilePatient();
-        schedule=new Schedule();
+        schedule=new SchedulePager();
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
