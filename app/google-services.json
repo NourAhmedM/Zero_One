@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "846344043330",
+    "firebase_url": "https://hiddenhands-70f65.firebaseio.com",
+    "project_id": "hiddenhands-70f65",
+    "storage_bucket": "hiddenhands-70f65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846344043330:android:c6e894b0cd3e0ced",
+        "android_client_info": {
+          "package_name": "com.example.android.secrethands"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846344043330-ivim6s8pip1qro22sohi1qhbumetm28j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChI2-LmE5xGNNVGk4OP6aP5qfBEDS9j0k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846344043330-ivim6s8pip1qro22sohi1qhbumetm28j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
