@@ -7,10 +7,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import com.example.android.secrethands.fragments.HomePatient;
-import com.example.android.secrethands.fragments.ProfilePatient;
 import com.example.android.secrethands.fragments.Schedule;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -18,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     private HomePatient homePatient;
-    private ProfilePatient profilePatient;
     private Schedule schedule;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -31,10 +28,7 @@ public class MainActivity extends AppCompatActivity {
                     loadFragment(homePatient);
 
                     return true;
-                case R.id.navigation_profile:
-                    loadFragment(profilePatient);
 
-                    return true;
                 case R.id.navigation_schedule:
                   loadFragment(schedule);
                     return true;
@@ -51,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //intialize fragments
         homePatient=new HomePatient();
-        profilePatient=new ProfilePatient();
         schedule=new Schedule();
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
