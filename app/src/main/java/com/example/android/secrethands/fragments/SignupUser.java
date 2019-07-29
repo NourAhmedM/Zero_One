@@ -1,6 +1,7 @@
 package com.example.android.secrethands.fragments;
 
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -17,6 +18,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.example.android.secrethands.MainActivity;
 import com.example.android.secrethands.R;
 import com.example.android.secrethands.datastructures.Patient;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -140,6 +142,8 @@ public class SignupUser extends Fragment {
                             Patient patient=new Patient(Integer.parseInt(mAgeView.getText().toString()),gender,userName,1);
                             FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(patient);
                             //          getActivity().onBackPressed();
+                            Intent intent =new Intent(getActivity(), MainActivity.class);
+                            startActivity(intent);
 
                         }else{
                             Toast.makeText(getContext(),task.getException().getMessage(),Toast.LENGTH_SHORT).show();
