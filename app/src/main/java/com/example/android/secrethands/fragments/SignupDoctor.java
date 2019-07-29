@@ -20,6 +20,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.example.android.secrethands.MainActivity;
 import com.example.android.secrethands.R;
 import com.example.android.secrethands.datastructures.Doctor;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -208,6 +209,8 @@ public class SignupDoctor extends Fragment {
                                         if(task.isSuccessful()){
                                             Doctor doctor=new Doctor(Integer.parseInt(mAgeView.getText().toString()),gender,userName,2,mNationalIDView.getText().toString(),downloadUrl.toString());
                                             FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(doctor);
+                                            Intent intent =new Intent(getActivity(), MainActivity.class);
+                                            startActivity(intent);
                                             //  getActivity().onBackPressed();
 
                                         }else{

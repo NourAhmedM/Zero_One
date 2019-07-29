@@ -1,5 +1,6 @@
 package com.example.android.secrethands;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -43,6 +44,13 @@ public class Signin extends AppCompatActivity {
         mLoginButton=(Button)findViewById(R.id.login_button);
         progressBar=(ProgressBar)findViewById(R.id.progress_login);
         signup=(TextView) findViewById(R.id.sign_up_text_view);
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Signin.this,Signup.class);
+                startActivity(intent);
+            }
+        });
         progressBar.setVisibility(View.GONE);
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,6 +78,8 @@ public class Signin extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
                                     //    getActivity().onBackPressed();
+                                    Intent intent =new Intent(Signin.this, MainActivity.class);
+                                    startActivity(intent);
 
 
 
