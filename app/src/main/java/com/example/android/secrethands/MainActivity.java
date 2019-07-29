@@ -9,11 +9,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.example.android.secrethands.fragments.HomePatient;
+import com.example.android.secrethands.fragments.ProfilePatient;
+import com.example.android.secrethands.fragments.Schedule;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
+
+    private HomePatient homePatient;
+    private ProfilePatient profilePatient;
+    private Schedule schedule;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -22,13 +28,15 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                    loadFragment(homePatient);
+
                     return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+                case R.id.navigation_profile:
+                    loadFragment(profilePatient);
+
                     return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
+                case R.id.navigation_schedule:
+                  loadFragment(schedule);
                     return true;
             }
             return false;
@@ -41,8 +49,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //intialize fragments
+        homePatient=new HomePatient();
+        profilePatient=new ProfilePatient();
+        schedule=new Schedule();
 
-        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
