@@ -15,5 +15,13 @@
         android:id="@+id/navigation_schedule"
         android:icon="@drawable/schedule"
         android:title="@string/title_schedule" />
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/about"
+        android:title="About" />
+    <item
+        android:id="@+id/sessions"
+        android:icon="@drawable/sessions"
+        android:title="Sessions" />
 
 </menu>
