@@ -43,6 +43,18 @@ public class ReadaBook extends Fragment {
         startbook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(bookname.getText().toString().length()==0){
+                    bookname.setError("Please Insert Name");
+                    return;
+                }
+                if(numofpages.getText().toString().length()==0){
+                    numofpages.setError("Please Insert Number of Pages");
+                    return;
+                }
+                if(numofpagesperday.getText().toString().length()==0){
+                    numofpagesperday.setError("Please Insert Valid Number");
+                    return;
+                }
 
 
                 BookDbHelper mDbHelper = new BookDbHelper(getContext());
@@ -52,7 +64,7 @@ public class ReadaBook extends Fragment {
                 contentValues.put(BookContract.BookEntry.COLUMN_NUMBER_OF_PAGES_PER_DAY, Integer.valueOf(numofpagesperday.getText().toString()));
                 SQLiteDatabase database= mDbHelper.getWritableDatabase();
                 long id= database.insert(BookContract.BookEntry.TABLE_NAME,null,contentValues);
-                Toast.makeText(getContext(), String.valueOf(id), Toast.LENGTH_SHORT).show();
+              // Toast.makeText(getContext(), String.valueOf(id), Toast.LENGTH_SHORT).show();
 
 
             }
