@@ -22,9 +22,11 @@
         android:textColor="@color/black"
         android:layout_height="wrap_content" />
 
-    <CalendarView
+    <DatePicker
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></CalendarView>
+        android:layout_height="wrap_content">
+
+    </DatePicker>
     <View
         android:layout_width="match_parent"
         android:background="@color/black"
@@ -61,10 +63,11 @@
         android:maxLength="1"
         android:hint="Duration"
         android:layout_height="wrap_content" />
-
-</LinearLayout>
     <Button
         android:layout_width="match_parent"
         android:text="ADD"
         android:layout_height="wrap_content" />
+
+</LinearLayout>
+
 </ScrollView>
