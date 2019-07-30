@@ -36,6 +36,9 @@ public class BookCursorAdapter extends CursorAdapter {
 
     }
 }
+
+
+
 /* mDbHelper=new BookDbHelper(getContext());
          ContentValues contentValues=new ContentValues();
          contentValues.put(BookContract.BookEntry.COLUMN_BOOK_NAME,"Read Book");

@@ -10,6 +10,9 @@ public class User {
     private String username;
     private int type;              //1->patient   2->doctor
 
+    public User() {
+    }
+
     public User(int age, String gender, String username, int type) {
         this.age = age;
         this.gender = gender;

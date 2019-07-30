@@ -24,32 +24,76 @@
 
         android:layout_height="wrap_content">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="20dp"
+            android:layout_height="wrap_content">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+
         android:textColor="@color/black"
         android:textStyle="bold"
         android:text="Doctor Name:  "
         android:textSize="24sp"
         android:layout_height="wrap_content" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_margin="20dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:text="Age:  "
-        android:textSize="24sp"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_margin="20dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:text="Gender:  "
-        android:textSize="24sp"
-        android:layout_height="wrap_content" />
-    <Button
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/name"
+                android:text="Aly Hassan"
+                android:textSize="24sp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="20dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Doctor    Age:  "
+                android:textSize="24sp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="31"
+                android:id="@+id/age"
+                android:textSize="24sp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="20dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Doctor Gender: "
+                android:textSize="24sp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Male"
+                android:id="@+id/gender"
+                android:textSize="24sp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <Button
         android:layout_width="match_parent"
 
 
