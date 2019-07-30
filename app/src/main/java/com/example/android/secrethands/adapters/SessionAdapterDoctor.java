@@ -19,8 +19,8 @@ import java.util.List;
  * Created by Aly on 7/30/2019.
  */
 
-public class SessionAdapter extends ArrayAdapter<Session> {
-    public SessionAdapter(@NonNull Context context, @NonNull List<Session> objects) {
+public class SessionAdapterDoctor extends ArrayAdapter<Session> {
+    public SessionAdapterDoctor(@NonNull Context context, @NonNull List<Session> objects) {
         super(context,0, objects);
     }
 

@@ -58,7 +58,7 @@ public class Session extends Fragment  {
                 startActivity(intent);
             }
         });
-       
+
         return view;
     }
 

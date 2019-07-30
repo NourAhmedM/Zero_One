@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.android.secrethands.fragments.About;
+import com.example.android.secrethands.fragments.ChooseDoctor;
 import com.example.android.secrethands.fragments.HomePatient;
 import com.example.android.secrethands.fragments.Schedule;
 import com.example.android.secrethands.fragments.SchedulePager;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private HomePatient homePatient;
     private SchedulePager schedule;
     private About about;
+    private ChooseDoctor chooseDoctor;
     private Session session;
 
     long type;
@@ -78,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         homePatient=new HomePatient();
         schedule=new SchedulePager();
         session =new Session();
+        chooseDoctor=new ChooseDoctor();
 
         final BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -167,6 +170,11 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         if(mAuthStateListener!=null)
             mFirebaseAuth.removeAuthStateListener(mAuthStateListener);
+    }
+    public void loadDoctorList(){
+        loadFragment(chooseDoctor);
+
+
     }
 
 }
