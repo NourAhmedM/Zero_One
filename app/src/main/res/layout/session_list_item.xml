@@ -15,7 +15,7 @@
             >
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/doctorImage"
+                android:id="@+id/doctorImageViewN"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/common_google_signin_btn_text_light"
@@ -25,7 +25,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/doctorUsername"
+                android:id="@+id/doctorUsernameViewN"
                 android:text="nour"
                 android:textSize="40sp"
                 android:textColor="@color/black"
@@ -39,7 +39,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/startingTime"
                 android:maxLines="2"
                 android:text="starting time : "
                 android:textSize="24sp"
@@ -49,9 +48,33 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/endingTime"
+                android:id="@+id/startingTimeViewN"
                 android:maxLines="2"
                 android:text="28/08/1998"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:layout_margin="8dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="duration : "
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:layout_margin="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/durationViewN"
+                android:maxLines="2"
+                android:text="4"
                 android:textSize="24sp"
                 android:textColor="@color/black"
                 android:layout_margin="8dp"/>

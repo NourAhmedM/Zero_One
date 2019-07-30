@@ -21,9 +21,6 @@ public class Session {
         this.patientId = patientId;
     }
 
-    public void setDuration(Date endTime) {
-        this.endTime = endTime;
-    }
 
     public void setStartTime(String startTime) {
         this.startTime = startTime;
@@ -41,8 +38,12 @@ public class Session {
         this.patientId = patientId;
     }
 
-    public Date getDuration() {
-        return endTime;
+    public void setDuration(double duration) {
+        this.duration = duration;
+    }
+
+    public double getDuration() {
+        return duration;
     }
 
     public String getStartTime() {
