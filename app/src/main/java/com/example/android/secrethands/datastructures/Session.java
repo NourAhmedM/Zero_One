@@ -21,9 +21,6 @@ public class Session {
         this.patientId = patientId;
     }
 
-    public void setDuration(double duration) {
-        this.duration = duration;
-    }
 
     public void setStartTime(String startTime) {
         this.startTime = startTime;
@@ -39,6 +36,10 @@ public class Session {
 
     public void setPatientId(String patientId) {
         this.patientId = patientId;
+    }
+
+    public void setDuration(double duration) {
+        this.duration = duration;
     }
 
     public double getDuration() {
