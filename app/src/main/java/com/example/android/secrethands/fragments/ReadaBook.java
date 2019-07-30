@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,7 +35,7 @@ public class ReadaBook extends Fragment {
         View view = inflater.inflate(R.layout.fragment_reada_book, container, false);
 
 
-        TextView startbook =(TextView) view.findViewById(R.id.beginreadingbutton);
+        ImageView startbook =(ImageView) view.findViewById(R.id.beginreadingbutton);
         final EditText bookname = (EditText) view.findViewById(R.id.nameofthebok);
         final EditText numofpages = (EditText) view.findViewById(R.id.numberofbookspages);
         final EditText numofpagesperday = (EditText) view.findViewById(R.id.pagesperday);
