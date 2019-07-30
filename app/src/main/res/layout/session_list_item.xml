@@ -41,19 +41,11 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/startingTime"
                 android:maxLines="2"
-                android:text="blablabakfjvrj"
+                android:text="starting time : "
                 android:textSize="24sp"
                 android:textColor="@color/black"
                 android:layout_margin="8dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/dash"
-                android:maxLines="2"
-                android:text=":"
-                android:textSize="24sp"
-                android:textColor="@color/black"
-                android:layout_margin="8dp"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
