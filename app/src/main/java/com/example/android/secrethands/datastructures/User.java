@@ -9,15 +9,25 @@ public class User {
     private String gender;
     private String username;
     private int type;              //1->patient   2->doctor
+    private String ID;
+
+    public String getID() {
+        return ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
 
     public User() {
     }
 
-    public User(int age, String gender, String username, int type) {
+    public User(int age, String gender, String username, int type,String ID) {
         this.age = age;
         this.gender = gender;
         this.username = username;
         this.type = type;
+        this .ID=ID;
     }
 
     public void setAge(int age) {

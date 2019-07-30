@@ -105,6 +105,7 @@ public class ChooseDoctor extends Fragment {
                    @Override
                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                        Intent intent=new Intent(getContext(), DoctorProfile.class);
+                       intent.putExtra("ID",doctors.get(i).getID());
                        startActivity(intent);
                    }
                }

@@ -207,7 +207,7 @@ public class SignupDoctor extends Fragment {
                                     public void onComplete(@NonNull Task<AuthResult> task) {
                                         progressBar.setVisibility(View.GONE);
                                         if(task.isSuccessful()){
-                                            Doctor doctor=new Doctor(Integer.parseInt(mAgeView.getText().toString()),gender,userName,2,mNationalIDView.getText().toString(),downloadUrl.toString());
+                                            Doctor doctor=new Doctor(Integer.parseInt(mAgeView.getText().toString()),gender,userName,2,mNationalIDView.getText().toString(),downloadUrl.toString(),FirebaseAuth.getInstance().getCurrentUser().getUid());
                                             FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(doctor);
                                             Intent intent =new Intent(getActivity(), MainActivity.class);
                                             startActivity(intent);

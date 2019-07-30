@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/doctorUsernameViewN"
                 android:text="nour"
-                android:textSize="40sp"
+                android:textSize="24sp"
                 android:textColor="@color/black"
                 android:layout_margin="8dp"
                 />
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="2"
                 android:text="starting time : "
-                android:textSize="24sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:layout_marginLeft="8dp"
                 />
@@ -52,7 +52,7 @@
                 android:id="@+id/startingTimeViewN"
                 android:maxLines="2"
                 android:text="28/08/1998"
-                android:textSize="24sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                />
 
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="2"
                 android:text="duration : "
-                android:textSize="24sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:layout_margin="8dp"/>
 
@@ -79,7 +79,7 @@
                 android:maxLines="2"
                 android:text="4"
                 android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:textSize="16sp" />
 
             <ImageView
                 android:layout_width="0dp"

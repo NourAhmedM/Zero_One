@@ -38,15 +38,18 @@ public class SessionAdapterDoctor extends ArrayAdapter<Session> {
         duration.setText(String.valueOf(Current.getDuration()));
 
         TextView startDate = (TextView) view.findViewById(R.id.start_time);
-        startDate.setText(String.valueOf(Current.getDuration()));
+        startDate.setText(Current.getStartTime());
+
+        TextView price = (TextView) view.findViewById(R.id.price);
+        price.setText(String.valueOf(Current.getPrice()));
 
 
         ImageView booked = (ImageView) view.findViewById(R.id.booked);
         if(Current.isBooked()){
-            booked.setImageResource(R.drawable.correct_doctor);
+            booked.setImageResource(R.drawable.wrong_doctor);
         }
         else {
-            booked.setImageResource(R.drawable.wrong_doctor);
+            booked.setImageResource(R.drawable.correct_doctor);
         }
 
         return view;

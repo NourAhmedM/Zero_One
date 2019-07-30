@@ -13,12 +13,37 @@ public class Session {
     private String doctorId;
     private String patientId;
 
-    public Session(double duration, String startTime, boolean booked, String doctorId, String patientId) {
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    int price;
+
+    public String getID() {
+        return ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+    private String ID;
+    public Session(){
+
+    }
+
+    public Session(double duration, String startTime, boolean booked, String doctorId, String patientId,String ID,int price) {
         this.duration = duration;
         this.startTime = startTime;
         this.booked = booked;
         this.doctorId = doctorId;
         this.patientId = patientId;
+        this.ID=ID;
+        this.price=price;
     }
 
 

@@ -139,7 +139,7 @@ public class SignupUser extends Fragment {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressBar.setVisibility(View.GONE);
                         if(task.isSuccessful()){
-                            Patient patient=new Patient(Integer.parseInt(mAgeView.getText().toString()),gender,userName,1);
+                            Patient patient=new Patient(Integer.parseInt(mAgeView.getText().toString()),gender,userName,1,FirebaseAuth.getInstance().getCurrentUser().getUid());
                             FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(patient);
                             //          getActivity().onBackPressed();
                             Intent intent =new Intent(getActivity(), MainActivity.class);

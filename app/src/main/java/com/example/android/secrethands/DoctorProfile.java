@@ -12,14 +12,17 @@ public class DoctorProfile extends AppCompatActivity {
     private ViewPager viewPager;
     private AvailableSessionViewPager viewPagerAdapter;
     private TabLayout tabLayout;
+    String ID;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_profile);
+        ID=getIntent().getStringExtra("ID");
+
         viewPager = (ViewPager) findViewById(R.id.pager);
-        viewPagerAdapter = new AvailableSessionViewPager(getSupportFragmentManager());
+        viewPagerAdapter = new AvailableSessionViewPager(getSupportFragmentManager(),ID);
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout = (TabLayout) findViewById(R.id.tab);
         tabLayout.setupWithViewPager(viewPager);

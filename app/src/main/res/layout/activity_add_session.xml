@@ -24,6 +24,7 @@
 
     <DatePicker
         android:layout_width="match_parent"
+        android:id="@+id/datapicker"
         android:layout_height="wrap_content">
 
     </DatePicker>
@@ -42,6 +43,7 @@
 
     <TimePicker
         android:layout_width="match_parent"
+        android:id="@+id/timepicker"
         android:layout_height="wrap_content">
 
     </TimePicker>
@@ -58,13 +60,23 @@
         android:layout_height="wrap_content" />
 
     <EditText
+    android:layout_width="match_parent"
+    android:inputType="number"
+    android:maxLength="1"
+    android:id="@+id/duration"
+    android:hint="Duration"
+    android:layout_height="wrap_content" />
+    <EditText
         android:layout_width="match_parent"
         android:inputType="number"
-        android:maxLength="1"
-        android:hint="Duration"
+        android:maxLength="3"
+        android:id="@+id/price"
+        android:layout_marginTop="10dp"
+        android:hint="Session Price"
         android:layout_height="wrap_content" />
     <Button
         android:layout_width="match_parent"
+        android:id="@+id/add"
         android:text="ADD"
         android:layout_height="wrap_content" />
 

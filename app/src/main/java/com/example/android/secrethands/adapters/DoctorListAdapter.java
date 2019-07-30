@@ -52,7 +52,7 @@ public class DoctorListAdapter extends ArrayAdapter<Doctor> {
         doctorname.setText(content);
 
         final CircleImageView doctorImageView = (CircleImageView) view.findViewById(R.id.doctor_image_list);
-        Toast.makeText(getContext(), current.getPhotoURL(), Toast.LENGTH_SHORT).show();
+       // Toast.makeText(getContext(), current.getPhotoURL(), Toast.LENGTH_SHORT).show();
 
                 Glide.with(doctorImageView.getContext())
                         .load(current.getPhotoURL())

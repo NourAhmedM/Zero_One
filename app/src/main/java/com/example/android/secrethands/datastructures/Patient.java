@@ -5,7 +5,7 @@ package com.example.android.secrethands.datastructures;
  */
 
 public class Patient extends User {
-    public Patient(int age, String gender, String username, int type) {
-        super(age, gender, username, type);
+    public Patient(int age, String gender, String username, int type,String ID) {
+        super(age, gender, username, type,ID);
     }
 }

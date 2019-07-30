@@ -9,8 +9,8 @@ public class Doctor extends User {
     private String photoURL;
     public Doctor() {
     }
-    public Doctor(int age, String gender, String username, int type, String nationalId, String photoURL) {
-        super(age, gender, username, type);
+    public Doctor(int age, String gender, String username, int type, String nationalId, String photoURL,String ID) {
+        super(age, gender, username, type,ID);
         this.nationalId = nationalId;
         this.photoURL = photoURL;
     }

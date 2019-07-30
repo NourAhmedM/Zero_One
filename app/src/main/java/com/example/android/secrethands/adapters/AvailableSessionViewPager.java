@@ -14,14 +14,16 @@ import com.example.android.secrethands.fragments.Schedule;
 
 public class AvailableSessionViewPager extends FragmentPagerAdapter {
     public static final int numberOfPages=2;
+    String ID;
 
     About about;
     AvailableSessions availableSessions;
-    public AvailableSessionViewPager(FragmentManager fm) {
+    public AvailableSessionViewPager(FragmentManager fm,String ID) {
         super(fm);
+        this.ID=ID;
 
-        about=new About();
-        availableSessions=new AvailableSessions();
+        about=new About(ID);
+        availableSessions=new AvailableSessions(ID);
 
 
     }
