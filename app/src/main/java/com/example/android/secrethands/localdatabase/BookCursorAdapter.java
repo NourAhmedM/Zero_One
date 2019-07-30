@@ -37,3 +37,13 @@ public class BookCursorAdapter extends CursorAdapter {
     }
 }
 
+
+
+/* mDbHelper=new BookDbHelper(getContext());
+         ContentValues contentValues=new ContentValues();
+         contentValues.put(BookContract.BookEntry.COLUMN_BOOK_NAME,"Read Book");
+         contentValues.put(BookContract.BookEntry.COLUMN_NUMBER_OF_PAGES,30);
+         contentValues.put(BookContract.BookEntry.COLUMN_NUMBER_OF_PAGES_PER_DAY, 5);
+         SQLiteDatabase database= mDbHelper.getWritableDatabase();
+         long id= database.insert(BookContract.BookEntry.TABLE_NAME,null,contentValues);
+         Toast.makeText(getContext(), String.valueOf(id), Toast.LENGTH_SHORT).show();*/

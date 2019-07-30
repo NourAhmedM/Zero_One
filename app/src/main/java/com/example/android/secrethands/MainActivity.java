@@ -25,7 +25,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements HomePatient.OnImageClickListener {
 
 
     private HomePatient homePatient;
@@ -171,10 +171,11 @@ public class MainActivity extends AppCompatActivity {
         if(mAuthStateListener!=null)
             mFirebaseAuth.removeAuthStateListener(mAuthStateListener);
     }
-    public void loadDoctorList(){
+
+
+    @Override
+    public void onImageSelected() {
         loadFragment(chooseDoctor);
 
-
     }
-
 }

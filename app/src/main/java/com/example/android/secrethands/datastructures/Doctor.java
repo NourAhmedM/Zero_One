@@ -7,7 +7,8 @@ package com.example.android.secrethands.datastructures;
 public class Doctor extends User {
     private String nationalId;
     private String photoURL;
-
+    public Doctor() {
+    }
     public Doctor(int age, String gender, String username, int type, String nationalId, String photoURL) {
         super(age, gender, username, type);
         this.nationalId = nationalId;

@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.android.secrethands.R;
@@ -49,21 +50,16 @@ public class DoctorListAdapter extends ArrayAdapter<Doctor> {
         TextView doctorname =(TextView) view.findViewById(R.id.doctor_name);
         String content = current.getUsername();
         doctorname.setText(content);
-        final CircleImageView doctorImageView = (CircleImageView) convertView.findViewById(R.id.doctor_image);
-        mdataReference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String urlphoto=dataSnapshot.getValue(String.class);
+
+        final CircleImageView doctorImageView = (CircleImageView) view.findViewById(R.id.doctor_image_list);
+        Toast.makeText(getContext(), current.getPhotoURL(), Toast.LENGTH_SHORT).show();
+
                 Glide.with(doctorImageView.getContext())
-                        .load(urlphoto)
+                        .load(current.getPhotoURL())
                         .into(doctorImageView);
-            }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
 
-            }
-        });
+
         return view;
     }
 }
