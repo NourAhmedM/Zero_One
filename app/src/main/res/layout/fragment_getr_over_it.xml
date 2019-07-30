@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:text="If you’re having a down day, have it. Let yourself feel the emotions — "
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="BUT DO NOT STAY THERE."
+            />
+
+
+        <TextView
+            android:id="@+id/videomeditation"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Videos"
+            android:textSize="30sp"
+            android:gravity="center"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/bookmeditation"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Books"
+            android:textSize="30sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/routinemeditation"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="helpfull Routines"
+            android:textSize="30sp"
+            android:gravity="center"/>
+
+
+
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

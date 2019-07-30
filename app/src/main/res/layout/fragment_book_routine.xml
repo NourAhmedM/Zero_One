@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/nameofthebok"
+            android:layout_width="240dp"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="40dp"
+            android:hint="the name of the book"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:id="@+id/numberofbookspahhes"
+            android:layout_width="240dp"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="40dp"
+            android:hint="the number of pages in the book"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:id="@+id/pagesperday"
+            android:layout_width="240dp"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="40dp"
+            android:hint="the number of pages to read per day"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/beginreadingbutton"
+            android:layout_width="165dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="begin reading"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textColorHighlight="#f00"
+            android:paddingTop="15dp"
+            android:paddingRight="20dp"
+            android:gravity="right"
+            android:textSize="20sp"
+            android:background="@drawable/round_edge"
+            android:layout_gravity="center"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
