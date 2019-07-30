@@ -8,12 +8,12 @@ import java.util.Date;
 
 public class Session {
     private double duration;
-    private Date startTime;
+    private String startTime;
     private boolean booked;
     private String doctorId;
     private String patientId;
 
-    public Session(double duration, Date startTime, boolean booked, String doctorId, String patientId) {
+    public Session(double duration, String startTime, boolean booked, String doctorId, String patientId) {
         this.duration = duration;
         this.startTime = startTime;
         this.booked = booked;
@@ -25,7 +25,7 @@ public class Session {
         this.duration = duration;
     }
 
-    public void setStartTime(Date startTime) {
+    public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
 
@@ -45,7 +45,7 @@ public class Session {
         return duration;
     }
 
-    public Date getStartTime() {
+    public String getStartTime() {
         return startTime;
     }
 

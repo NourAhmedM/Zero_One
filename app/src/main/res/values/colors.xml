@@ -7,4 +7,8 @@
     <color name="white">#ffffff</color>
     <color name="buttonEnabledStateColor">#0000CC</color>
 
+
+    <color name="session_correct_doctor">#901aff66</color>
+    <color name="session_wrong_doctor">#90e63900</color>
+
 </resources>
