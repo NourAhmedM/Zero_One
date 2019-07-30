@@ -32,9 +32,7 @@ public class SessionsPatientPresDoctorProfile extends ArrayAdapter<Session> {
 
     public SessionsPatientPresDoctorProfile(Context context, int resource, List<Session> objects) {
         super(context, 0, objects);
-        mfirebase=FirebaseDatabase.getInstance();
-        mdataReference=mfirebase.getReference().child("Users");
-        mdataReferenceUsername=mfirebase.getReference().child("Users");
+
     }
 
     @NonNull
@@ -55,6 +53,9 @@ public class SessionsPatientPresDoctorProfile extends ArrayAdapter<Session> {
         duration.setText(String.valueOf(Current.getDuration()));
         startingTime.setText(Current.getStartTime());
 
+        mfirebase=FirebaseDatabase.getInstance();
+        mdataReference=mfirebase.getReference().child("Users");
+        mdataReferenceUsername=mfirebase.getReference().child("Users");
 
         mdataReference=mdataReference.child(Current.getDoctorId()).child("photoURL");
         mdataReferenceUsername=mdataReferenceUsername.child(Current.getDoctorId()).child("username");

@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.android.secrethands.R;
 import com.example.android.secrethands.datastructures.Doctor;
+import com.example.android.secrethands.datastructures.Patient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -49,12 +50,14 @@ public class About extends Fragment {
         name=(TextView)view.findViewById(R.id.name);
         genderView=(TextView)view.findViewById(R.id.gender);
         firebaseDatabase=FirebaseDatabase.getInstance();
-        databaseReference=firebaseDatabase.getReference().child("Users").child(uID);
+        databaseReference=firebaseDatabase.getReference().child("Users").child("KNGmtCxP1TfE2NJHIGMizqJHksg2");
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
             //   Toast.makeText(getContext(), dataSnapshot.toString(), Toast.LENGTH_SHORT).show();
-              //  Doctor doctor=dataSnapshot.getValue(Doctor.class);
+
+                Toast.makeText(getContext(),dataSnapshot.child("username").getValue(String.class),Toast.LENGTH_SHORT).show();
+
              //  long age=dataSnapshot.child("age").getValue(Long.class);
              //   String username=dataSnapshot.child("username").getValue(String.class);
                // String gender=dataSnapshot.child("gender").getValue(String.class);

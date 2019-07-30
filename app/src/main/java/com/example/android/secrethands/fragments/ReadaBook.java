@@ -44,6 +44,7 @@ public class ReadaBook extends Fragment {
             @Override
             public void onClick(View view) {
 
+
                 BookDbHelper mDbHelper = new BookDbHelper(getContext());
                 ContentValues contentValues=new ContentValues();
                 contentValues.put(BookContract.BookEntry.COLUMN_BOOK_NAME,bookname.getText().toString());

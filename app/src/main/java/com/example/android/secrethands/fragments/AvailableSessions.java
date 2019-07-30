@@ -61,8 +61,8 @@ public class AvailableSessions extends Fragment {
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                Toast.makeText(getContext(),dataSnapshot.toString(),Toast.LENGTH_SHORT).show();
-                Toast.makeText(getContext(),"blalblabla",Toast.LENGTH_SHORT).show();
+           //     Toast.makeText(getContext(),dataSnapshot.toString(),Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(getContext(),"blalblabla",Toast.LENGTH_SHORT).show();
                 com.example.android.secrethands.datastructures.Session oneSession=dataSnapshot.getValue(com.example.android.secrethands.datastructures.Session.class);
                 sessions.add(oneSession);
                 sessionsPatientPresDoctorProfile.notifyDataSetChanged();

@@ -18,7 +18,7 @@ public class HomePatient extends Fragment {
     OnImageClickListener mCallback;
     public interface OnImageClickListener
     {
-        void onImageSelected();
+        void onImageSelected(int i);
     }
 
 
@@ -49,10 +49,20 @@ public class HomePatient extends Fragment {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mCallback.onImageSelected();
+                mCallback.onImageSelected(1);
 
             }
         });
+        ImageView mood=(ImageView)view.findViewById(R.id.mood);
+
+        mood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mCallback.onImageSelected(0);
+
+            }
+        });
+
         return view;
     }
 
