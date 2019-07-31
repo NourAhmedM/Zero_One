@@ -256,7 +256,15 @@ public class VideoCall extends Activity implements
                 mHost.setText( param != null ? param : "prod.vidyo.io");
 
                 param = uri.getQueryParameter("token");
+                int  token;
+                if(MainActivity.type==1){
+                    token=R.string.User_Token;
+                }
+                else{
+                    token=R.string.Doctor_Token;
+                }
                 mToken.setText(param != null ? param : "");
+                mToken.setText(token);
 
                 param = uri.getQueryParameter("displayName");
                 mDisplayName.setText(param != null ? param : "Demo User");

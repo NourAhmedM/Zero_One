@@ -20,6 +20,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Map;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -50,13 +52,15 @@ public class About extends Fragment {
         name=(TextView)view.findViewById(R.id.name);
         genderView=(TextView)view.findViewById(R.id.gender);
         firebaseDatabase=FirebaseDatabase.getInstance();
-        databaseReference=firebaseDatabase.getReference().child("Users").child("KNGmtCxP1TfE2NJHIGMizqJHksg2");
+        databaseReference=firebaseDatabase.getReference().child("Users").child(uID);
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-            //   Toast.makeText(getContext(), dataSnapshot.toString(), Toast.LENGTH_SHORT).show();
+             // Toast.makeText(getContext(), dataSnapshot.getValue().toString(), Toast.LENGTH_SHORT).show();
 
-                Toast.makeText(getContext(),dataSnapshot.child("username").getValue(String.class),Toast.LENGTH_SHORT).show();
+             // long age=dataSnapshot.getValue(Long.class);
+               // Toast.makeText(getContext(),String.valueOf(age),Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getContext(),dataSnapshot.getValue(String.class),Toast.LENGTH_SHORT).show();
 
              //  long age=dataSnapshot.child("age").getValue(Long.class);
              //   String username=dataSnapshot.child("username").getValue(String.class);

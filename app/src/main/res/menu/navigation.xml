@@ -13,6 +13,14 @@
         android:icon="@drawable/schedule"
         android:title="@string/title_schedule" />
     <item
+        android:id="@+id/notification"
+
+        android:iconTint="@color/white"
+        android:icon="@drawable/notification"
+        android:title="Notification" />
+
+
+    <item
         android:id="@+id/about"
         android:icon="@drawable/about"
         android:title="About" />

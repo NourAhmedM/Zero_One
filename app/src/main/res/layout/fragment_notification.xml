@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.secrethands.fragments.Notification">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:text="Notifications"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:layout_marginBottom="20dp"
+        android:layout_height="3dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="Your Exercise Starts Within 30 minutes Be Ready !"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:background="@color/black"
+        android:layout_height="2dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="You Did not Share Your Day, Share Your Day Now !"/>
+</LinearLayout>

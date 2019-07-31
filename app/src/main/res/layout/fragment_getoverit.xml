@@ -8,28 +8,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:background="#eee">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="20dp"
-                android:textSize="17sp"
-                android:textColor="#222"
-                android:text="If you’re having a down day, have it. Let yourself feel the emotions — "
-                />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:textSize="20sp"
-                android:textColor="#000"
-                android:textStyle="bold"
-                android:text="BUT DO NOT STAY THERE."
-                />
 
 
             <RelativeLayout
@@ -134,7 +113,7 @@
                     android:layout_centerVertical="true"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="helpfull Routines"
+                    android:text="helpful  Routine"
                     android:textColor="#ffffff"
                     android:textSize="30dp"
                     android:textStyle="bold" />

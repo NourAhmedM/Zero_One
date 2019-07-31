@@ -43,7 +43,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:id="@+id/name"
-                android:text="Aly Hassan"
+                android:text="nooor"
                 android:textSize="24sp"
                 android:layout_height="match_parent" />
         </LinearLayout>
@@ -65,7 +65,7 @@
                 android:layout_width="wrap_content"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:text="31"
+                android:text="21"
                 android:id="@+id/age"
                 android:textSize="24sp"
                 android:layout_height="match_parent" />
@@ -88,17 +88,12 @@
                 android:layout_width="wrap_content"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:text="Male"
+                android:text="Female"
                 android:id="@+id/gender"
                 android:textSize="24sp"
                 android:layout_height="match_parent" />
         </LinearLayout>
-        <Button
-        android:layout_width="match_parent"
 
-
-        android:text="Upload CV"
-        android:layout_height="wrap_content" />
     </LinearLayout>
 
 

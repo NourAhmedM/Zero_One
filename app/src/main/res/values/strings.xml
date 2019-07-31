@@ -4,6 +4,9 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    <string name="Doctor_Token">cHJvdmlzaW9uAGFseXJhbXp5QDU3ZTU3My52aWR5by5pbwA2MzczMTgzMDg4NQAAZDA5YTk2ZWI0Y2IzZjhhYzRkZDAzZDg5YjE1MTQ3YzJhZDdjNjAyNzU3YTMwMWQ0NGY5ZGRjMTk0NGI2NmM1YTUzM2JmMTM2ZjMxODE2ZDgzMzJiMjg4NGM1YmY2OWVl</string>
+    <string name="User_Token">cHJvdmlzaW9uAG5vb29yQDU3ZTU3My52aWR5by5pbwA2MzczMTgzMDYyOQAAMDc4ZjYzYzBhMmQ3ZmIzOWZlN2MxMmNlODk3NTQ3ZDJhZjI4N2I2OTNlNDIyZmQzMTg1YWVkMzhiYjQ2ZTk4Zjc2NTFkMjUyZGIzYmZlY2EyNzM5M2MzZmFlYjkzMDVm</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_profile">Profile</string>

@@ -55,7 +55,7 @@ public class AvailableSessions extends Fragment {
         ListView listView=(ListView)view.findViewById(R.id.list);
         firebaseDatabase= FirebaseDatabase.getInstance();
         databaseReference=firebaseDatabase.getReference().child("Users").child(uID).child("Sessions");
-        Toast.makeText(getContext(), uID, Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(getContext(), uID, Toast.LENGTH_SHORT).show();
 
 
         databaseReference.addChildEventListener(new ChildEventListener() {

@@ -2,20 +2,25 @@ package com.example.android.secrethands;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.internal.BottomNavigationItemView;
+import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.secrethands.fragments.About;
 import com.example.android.secrethands.fragments.ChooseDoctor;
 import com.example.android.secrethands.fragments.FellingsFragment;
 import com.example.android.secrethands.fragments.HomePatient;
+import com.example.android.secrethands.fragments.Notification;
 import com.example.android.secrethands.fragments.ReadaBook;
 import com.example.android.secrethands.fragments.Schedule;
 import com.example.android.secrethands.fragments.SchedulePager;
@@ -44,14 +49,21 @@ public class MainActivity extends AppCompatActivity implements HomePatient.OnIma
     private routines routines;
     private FellingsFragment fellingsFragment;
     private share_day shareDay;
+    private Notification notification;
 
-    private
-    long type;
+    public static long type;
     ProgressBar progressBar;
 
     @Override
     public void onBackPressed() {
-      super.onBackPressed();
+        int count = getSupportFragmentManager().getBackStackEntryCount();
+        if (count == 1) {
+            finish();
+        } else {
+
+            getSupportActionBar().show();
+            getSupportFragmentManager().popBackStack();
+        }
     }
 
     //Firebase
@@ -80,6 +92,9 @@ public class MainActivity extends AppCompatActivity implements HomePatient.OnIma
                 case R.id.sessions:
                     loadFragment(session);
                     return true;
+                case R.id.notification:
+                    loadFragment(notification);
+                    return true;
 
             }
             return false;
@@ -93,6 +108,7 @@ public class MainActivity extends AppCompatActivity implements HomePatient.OnIma
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //intialize fragments
+        notification=new Notification();
         fellingsFragment=new FellingsFragment();
         fellingsFragment.initCallback(new FellingsFragment.OnImageClickListener() {
             @Override
@@ -139,6 +155,17 @@ public class MainActivity extends AppCompatActivity implements HomePatient.OnIma
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         progressBar=(ProgressBar) findViewById(R.id.progress_par);
         progressBar.setVisibility(View.GONE);
+        BottomNavigationMenuView bottomNavigationMenuView =
+                (BottomNavigationMenuView) navigation.getChildAt(0);
+        View v = bottomNavigationMenuView.getChildAt(3);
+        BottomNavigationItemView itemView = (BottomNavigationItemView) v;
+
+        View badge = LayoutInflater.from(getApplicationContext())
+                .inflate(R.layout.badge, itemView, true);
+        TextView textView=(TextView)badge.findViewById(R.id.notifications_badge);
+        textView.setText("2");
+        textView.setVisibility(View.GONE);
+
       //  navigation.getMenu().removeItem(R.id.about);
         // Decide Doctor or Patient
         //firebase initialize
@@ -163,6 +190,7 @@ public class MainActivity extends AppCompatActivity implements HomePatient.OnIma
                             type=dataSnapshot.getValue(long.class);
                             progressBar.setVisibility(View.GONE);
                             if(type==1){
+
                                 navigation.getMenu().removeItem(R.id.about);
                                 navigation.getMenu().removeItem(R.id.sessions);
                                 loadFragment(homePatient);
@@ -208,7 +236,7 @@ public class MainActivity extends AppCompatActivity implements HomePatient.OnIma
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container, fragment)
+                    .replace(R.id.fragment_container, fragment).addToBackStack(null)
                     .commitAllowingStateLoss();
 
             fragmentManager.executePendingTransactions();

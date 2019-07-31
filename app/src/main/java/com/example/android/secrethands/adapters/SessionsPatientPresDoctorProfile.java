@@ -51,6 +51,8 @@ public class SessionsPatientPresDoctorProfile extends ArrayAdapter<Session> {
         TextView startingTime = (TextView) convertView.findViewById(R.id.startingTimeViewN);
         final CircleImageView doctorImage=(CircleImageView) convertView.findViewById(R.id.doctorImageViewN);
         ImageView book=(ImageView) convertView.findViewById(R.id.booknow);
+        final TextView price = (TextView) convertView.findViewById(R.id.price);
+        price.setText(String.valueOf(Current.getPrice()));
 
         duration.setText(String.valueOf(Current.getDuration()));
         startingTime.setText(Current.getStartTime());
