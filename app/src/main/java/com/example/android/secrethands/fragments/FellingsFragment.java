@@ -43,7 +43,7 @@ public class FellingsFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_fellings, container, false);
         ArrayList<Disorders> disorders = new ArrayList<Disorders>();
         disorders.add(new Disorders("Depression - الاكتئاب",R.drawable.depression, 0, R.string.dep_description, R.string.dep_symptoms, R.string.dep_treatments));
-        disorders.add(new Disorders("ِAutism - التوحد",R.drawable.autism, 0, R.string.aut_description, R.string.aut_symptoms, R.string.aut_treatments));
+        disorders.add(new Disorders("Loneliness - الوحده",R.drawable.autism, 0, 0, 0, 0));
         disorders.add(new Disorders("Anxiety - القلق",R.drawable.anxiety, 0, R.string.anx_description, R.string.anx_symptoms, R.string.anx_treatments));
         FeelingdAdapter mAdapter = new FeelingdAdapter(getContext(), disorders);
         ListView list = view.findViewById(R.id.list);
