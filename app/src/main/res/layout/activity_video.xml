@@ -5,16 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".VideoCall">
+   tools:context=".VideoCall">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.vidyo.vidyoconnector.VideoFrameLayout
+       
+        <com.example.android.secrethands.VideoFrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/videoFrame" />
+            android:id="@+id/videoFrame"
+            android:layout_height="match_parent">
+
+        </com.example.android.secrethands.VideoFrameLayout>
 
         <LinearLayout
             android:orientation="vertical"
