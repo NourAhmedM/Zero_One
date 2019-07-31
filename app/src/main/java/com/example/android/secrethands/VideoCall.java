@@ -38,6 +38,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.vidyo.VidyoClient.Connector.Connector;
@@ -140,6 +141,7 @@ public class VideoCall extends Activity implements
 
         // Initialize the member variables
         mControlsLayout = (LinearLayout) findViewById(R.id.controlsLayout);
+        mControlsLayout.setVisibility(View.GONE);
         mToolbarLayout = (LinearLayout) findViewById(R.id.toolbarLayout);
         mVideoFrame = (VideoFrameLayout) findViewById(R.id.videoFrame);
         mVideoFrame.Register(this);
@@ -238,6 +240,16 @@ public class VideoCall extends Activity implements
     protected void onStart() {
         mLogger.Log("onStart");
         super.onStart();
+        String  token;
+
+        if(MainActivity.type==1){
+            token="cHJvdmlzaW9uAG5vb29yQDU3ZTU3My52aWR5by5pbwA2MzczMTgzMDYyOQAAMDc4ZjYzYzBhMmQ3ZmIzOWZlN2MxMmNlODk3NTQ3ZDJhZjI4N2I2OTNlNDIyZmQzMTg1YWVkMzhiYjQ2ZTk4Zjc2NTFkMjUyZGIzYmZlY2EyNzM5M2MzZmFlYjkzMDVm";
+
+        }
+        else{
+            token="cHJvdmlzaW9uAGFseXJhbXp5QDU3ZTU3My52aWR5by5pbwA2MzczMTgzMDg4NQAAZDA5YTk2ZWI0Y2IzZjhhYzRkZDAzZDg5YjE1MTQ3YzJhZDdjNjAyNzU3YTMwMWQ0NGY5ZGRjMTk0NGI2NmM1YTUzM2JmMTM2ZjMxODE2ZDgzMzJiMjg4NGM1YmY2OWVl";
+
+        }
 
         // Initialize or refresh the app settings.
         // When app is first launched, mRefreshSettings will always be true.
@@ -256,15 +268,10 @@ public class VideoCall extends Activity implements
                 mHost.setText( param != null ? param : "prod.vidyo.io");
 
                 param = uri.getQueryParameter("token");
-                int  token;
-                if(MainActivity.type==1){
-                    token=R.string.User_Token;
-                }
-                else{
-                    token=R.string.Doctor_Token;
-                }
+
+              //  Toast.makeText(getApplicationContext(),token,Toast.LENGTH_SHORT).show();
                 mToken.setText(param != null ? param : "");
-                mToken.setText(token);
+               // mToken.setText(token);
 
                 param = uri.getQueryParameter("displayName");
                 mDisplayName.setText(param != null ? param : "Demo User");
@@ -300,7 +307,7 @@ public class VideoCall extends Activity implements
             } else {
                 // If this app was launched by a different app, then get any parameters; otherwise use default settings.
                 mHost.setText(intent.hasExtra("host") ? intent.getStringExtra("host") : "prod.vidyo.io");
-                mToken.setText(intent.hasExtra("token") ? intent.getStringExtra("token") : "");
+                mToken.setText(intent.hasExtra("token") ? intent.getStringExtra("token") :token );
                 mDisplayName.setText(intent.hasExtra("displayName") ? intent.getStringExtra("displayName") : "DemoUser");
                 mResourceId.setText(intent.hasExtra("resourceId") ? intent.getStringExtra("resourceId") : "DemoRoom");
                 mReturnURL = intent.hasExtra("returnURL") ? intent.getStringExtra("returnURL") : null;

@@ -35,7 +35,7 @@
                android:layout_below="@id/icon"
                android:layout_marginBottom="24dp"
                android:layout_marginTop="16dp"
-               android:text="Login to Hidden Hands"
+               android:text="Login To Your Account "
                android:textColor="@color/black"
                android:textSize="24sp"
                android:textStyle="bold"

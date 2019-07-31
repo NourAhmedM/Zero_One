@@ -84,7 +84,7 @@
         <ImageView
             android:id="@+id/start"
             android:layout_width="match_parent"
-            android:src="@drawable/start"
+            android:src="@drawable/startdoctor"
             android:layout_height="30dp" />
 
     </LinearLayout>
